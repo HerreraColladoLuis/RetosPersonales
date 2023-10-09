@@ -42,7 +42,7 @@ def find_combinations(numbers: tuple) -> list:
             if not is_valid(pairs[index], combination):
                 continue
 
-            if pairs[index] == pairs[index - 1]:
+            if index > start and pairs[index] == pairs[index - 1]:
                 continue
 
             combination.append(pairs[index])
